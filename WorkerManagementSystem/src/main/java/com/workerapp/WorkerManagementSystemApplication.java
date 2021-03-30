@@ -1,13 +1,13 @@
-package com.example.demo;
+package com.workerapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WorkersProjectApplication {
+public class WorkerManagementSystemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WorkersProjectApplication.class, args);
+		SpringApplication.run(WorkerManagementSystemApplication.class, args);
 	}
 
 }
