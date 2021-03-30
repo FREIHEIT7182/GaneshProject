@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 
@@ -16,6 +18,7 @@ import lombok.Data;
 
 public class Customer {
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long customerId;   
 	@NotNull
     private String firstName;  
@@ -31,15 +34,14 @@ public class Customer {
 	@Column(unique=true,length = 10)
     private String phoneNumber ;                            
     private Date registerDate ;
-    @NotNull
-    private String  workType;
      
     @NotNull
-    private String workerAddress ;
+    private String CustomerAddress ;
     @Lob
     private byte[] image  ;
+    
 	public Customer(Long customerId, String firstName, String lastName, String email, String password,
-			String reTypePassword, String phoneNumber, Date registerDate, String workType, String workerAddress,
+			String reTypePassword, String phoneNumber, Date registerDate, String workType, String CustomerAddress,
 			byte[] image) {
 		super();
 		this.customerId = customerId;
@@ -50,8 +52,8 @@ public class Customer {
 		this.reTypePassword = reTypePassword;
 		this.phoneNumber = phoneNumber;
 		this.registerDate = registerDate;
-		this.workType = workType;
-		this.workerAddress = workerAddress;
+		
+		this.CustomerAddress = CustomerAddress;
 		this.image = image;
 	}
 	public Long getCustomerId() {
@@ -102,17 +104,12 @@ public class Customer {
 	public void setRegisterDate(Date registerDate) {
 		this.registerDate = registerDate;
 	}
-	public String getWorkType() {
-		return workType;
+
+	public String getCustomerAddress() {
+		return CustomerAddress;
 	}
-	public void setWorkType(String workType) {
-		this.workType = workType;
-	}
-	public String getWorkerAddress() {
-		return workerAddress;
-	}
-	public void setWorkerAddress(String workerAddress) {
-		this.workerAddress = workerAddress;
+	public void setCustomerAddress(String CustomerAddress) {
+		this.CustomerAddress = CustomerAddress;
 	}
 	public byte[] getImage() {
 		return image;
@@ -124,8 +121,8 @@ public class Customer {
 	public String toString() {
 		return "Customer [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
 				+ email + ", password=" + password + ", reTypePassword=" + reTypePassword + ", phoneNumber="
-				+ phoneNumber + ", registerDate=" + registerDate + ", workType=" + workType + ", workerAddress="
-				+ workerAddress + ", image=" + Arrays.toString(image) + "]";
+				+ phoneNumber + ", registerDate=" + registerDate  + ", CustomerAddress="
+				+ CustomerAddress + ", image=" + Arrays.toString(image) + "]";
 	}
 	
 

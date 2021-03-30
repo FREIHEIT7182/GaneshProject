@@ -31,10 +31,10 @@ public class Worker {
 	@Column(unique=true)
     private String password;   
 	@Column(unique=true)
-    private String reTypePassword  ; 
+    private String reTypePassword; 
 	@Column(unique=true,length = 10)
-    private String phoneNumber ;                            
-    private Date registerDate ;
+    private String phoneNumber;                            
+    private Date registerDate;
     @NotNull
     private String  skillType;
     @NotNull
