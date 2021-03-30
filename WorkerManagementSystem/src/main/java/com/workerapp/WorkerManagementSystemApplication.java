@@ -8,6 +8,9 @@ public class WorkerManagementSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WorkerManagementSystemApplication.class, args);
+		
+		System.out.println(" ----------- project started ------------------");
 	}
+	
 
 }
