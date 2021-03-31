@@ -25,4 +25,9 @@ public class WorkerCustomerService {
 	public ResponseEntity<Object> createCustomer(Customer customer) {
 		return new ResponseEntity<Object>(repository1.save(customer),HttpStatus.OK);
 	}
+
+	public Iterable<Worker> getAllWorkers() {
+		// TODO Auto-generated method stub
+		return repository.findAll();
+	}
 }
