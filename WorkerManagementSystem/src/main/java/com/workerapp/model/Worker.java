@@ -1,6 +1,7 @@
 package com.workerapp.model;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -34,7 +35,7 @@ public class Worker {
     private String reTypePassword; 
 	@Column(unique=true,length = 10)
     private String phoneNumber;                            
-    private Date registerDate;
+    private Date registerDate = Calendar.getInstance().getTime();
     @NotNull
     private String  skillType;
     @NotNull
