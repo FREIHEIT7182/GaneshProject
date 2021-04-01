@@ -1,6 +1,5 @@
 package com.workerapp.model;
 
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -10,11 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.UniqueConstraint;
 
 import com.sun.istack.NotNull;
 
-import lombok.Data;
 
 @Entity
 
@@ -54,18 +51,18 @@ public class Worker {
 			String reTypePassword, String phoneNumber, Date registerDate, String skillType, Integer yearsOfExperience,
 			String address, byte[] image) {
 		super();
-		this.workerId = workerId;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-		this.reTypePassword = reTypePassword;
-		this.phoneNumber = phoneNumber;
-		this.registerDate = registerDate;
-		this.skillType = skillType;
-		this.yearsOfExperience = yearsOfExperience;
-		this.address = address;
-		this.image = image;
+				this.workerId = workerId;
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.email = email;
+				this.password = password;
+				this.reTypePassword = reTypePassword;
+				this.phoneNumber = phoneNumber;
+				this.registerDate = registerDate;
+				this.skillType = skillType;
+				this.yearsOfExperience = yearsOfExperience;
+				this.address = address;
+				this.image = image;
 	}
 
 	public Long getWorkerId() {
